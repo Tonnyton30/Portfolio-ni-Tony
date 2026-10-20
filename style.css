@@ -1,0 +1,28 @@
+.nav-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 0.5rem 2rem;
+
+
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
