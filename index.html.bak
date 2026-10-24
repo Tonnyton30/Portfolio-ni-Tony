@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    
+        <nav class="nav-item">
+            <div class="logo">
+            <h1>AT</h1>
+        </div>
+
+            <button class="menu-toggle" type="button" aria-label="Buksan ang navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="primary-navigation">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About Me</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+            <div class="gmail">
+                <p>toledoantonio113007@gmail.com</p>
+            </div>
+            </div>
+        </nav>
+
+    </header>
+
+    
+<section class="hero">
+  <div class="phone">
+    <img src="87a3e788-2ed0-4400-8995-37d775a92a69.jpg" alt="Dev's Image">
+  </div>
+  <div class="text">
+    <h1>Hi! I'm Antonio Toledo</h1>
+    <p>An aspiring Fullstack web developer.</p>
+  </div>
+</section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+W

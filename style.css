@@ -2,42 +2,66 @@
   box-sizing: border-box;
 }
 
-.nav-item{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    padding: 0.6875rem 2rem;
-    background-color: #000000;
+body {
+  margin: 0;
+  background: #d9d9d9;
+  font-family: Geometric, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.nav-item {
+  position: relative;
+  top: 0.5rem;
+  left: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(75% - 4rem);
+  max-width: 1440px;
+  padding: 1rem;
+  transform: translateX(-50%);
+  border: 1px solid #fff;
+  box-shadow: 0 4px 8px rgba(2, 2, 2, 0.5);
+  border-radius: 20px;
+  background-color: #000;
 }
 
 .logo {
-  width: 76px;
-  height: 76px;
-  border: 1px solid #fff;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 50000%;
   background-color: #fff;
 }
 
-.logo h1{
-  font-size: 1.5rem;
+.logo h1 {
   margin: 0;
   color: #000;
+  font-size: 1.5rem;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle span {
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
 }
 
 .nav-links {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 1rem;
-  align-items: center;
+  flex: 1;
   font-size: 1.25rem;
-  
 }
 
 .nav-links a {
@@ -47,69 +71,147 @@
 
 .nav-links ul {
   display: flex;
-  flex-direction: row;
-gap: 1rem;
-  list-style: none;
+  flex: 1;
+  justify-content: center;
+  gap: clamp(1rem, 4vw, 5rem);
+  margin: 0;
   padding: 0;
-  margin: 0;
-  gap: 1rem;
   color: #fff;
+  list-style: none;
 }
 
-.gmail {
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 50px;
-  padding: 0.6rem 1rem;
-  background-color: #fff;
-  font-size: 1.25rem;
+.hero {
+  display: flex;
+  align-items: start;
+  gap: 100px;
+  width: min(100%, 1000px);
+  min-height: calc(100vh - 110px);
+  margin: 0 auto;
+  padding: clamp(1rem, 4vw, 2.5rem);
+  flex-direction: row;
 }
 
-.gmail p {
+.phone {
+  width: 250px;
+  height: 320px;
+  justify-self: center;
+  margin-top: 5rem;
+  gap: 1rem;
+}
+
+.phone img {
+  display: flex;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  margin-left:auto;
+}
+
+.phone img:hover {
+  transform: scale(1.05);
+}
+
+.hero h1 {
   margin: 0;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
 }
 
-.menu-toggle {
-  display: none;
+.hero h3 {
+  margin: 0.25rem 0 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 700;
 }
 
-@media (max-width: 600px) {
+.hero p {
+  margin: 0;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.6;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.homebutton {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  
+}
+
+.aboutme {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: cursive;
+}
+
+.aboutme:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* From Uiverse.io by d4niz */ 
+.GitHub {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: cursive;
+}
+
+.GitHub:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 900px) {
   .nav-item {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0.75rem;
-    padding: 1rem;
-    border-radius: 24px;
+    padding: 0.5rem;
+    border-radius: 0;
   }
 
   .menu-toggle {
     display: flex;
-    width: 44px;
-    height: 44px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 5px;
+    width: 44px;
+    height: 44px;
     border: 1px solid #fff;
     border-radius: 12px;
     background: transparent;
     cursor: pointer;
   }
 
-  .menu-toggle span {
-    width: 20px;
-    height: 2px;
-    border-radius: 2px;
-    background: #fff;
-  }
-
   .nav-links {
     display: none;
     flex: 1 1 100%;
-    min-width: 0;
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
+    min-width: 0;
   }
 
   .nav-links.is-open {
@@ -117,9 +219,9 @@ gap: 1rem;
   }
 
   .nav-links ul {
-    width: 100%;
     flex-direction: column;
-    gap: 0;
+    gap: 20px;
+    width: 100%;
   }
 
   .nav-links li a {
@@ -127,9 +229,57 @@ gap: 1rem;
     padding: 0.75rem 0;
   }
 
-  .gmail {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .phone {
+    justify-self: center;
+    width: min(100%, 200px);
+    justify-content: center;
+    aspect-ratio: 25 / 32;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .hero p {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-item {
+    width: calc(100% - 2rem);
+    padding: 0.75rem;
+    border-radius: 20px;
+  }
+
+  .hero {
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .phone {
+    width: min(70vw, 220px);
+    height: auto;
+    aspect-ratio: 1;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .phone img {
+    display: block;
     width: 100%;
-    text-align: center;
-    overflow-wrap: anywhere;
+    height: 100%;
+    margin-left: 0;
+  }
+
+  .text {
+    width: 100%;
+    margin-left: 0;
   }
 }
