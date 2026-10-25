@@ -1,3 +1,4 @@
 {
-    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.multiRootWorkspaceName": "Portfolio"
 }
