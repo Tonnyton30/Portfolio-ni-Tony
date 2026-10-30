@@ -1,4 +1,5 @@
 {
     "liveServer.settings.CustomBrowser": "chrome",
-    "liveServer.settings.multiRootWorkspaceName": "Portfolio"
+    "liveServer.settings.multiRootWorkspaceName": "Portfolio",
+    "liveServer.settings.port": 5501
 }

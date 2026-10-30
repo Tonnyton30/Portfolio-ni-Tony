@@ -171,7 +171,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background: #d9d9d9;
+  background-image: url("black background.jpg");
   font-family: "Space Grotesk", monospace;
   font-size: 1rem;
   line-height: 1.6;
@@ -184,7 +184,7 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   background-color: #000;
   box-shadow: 0 0.25rem 0.5rem rgba(2, 2, 2, 0.5);
 }
@@ -234,6 +234,7 @@ header {
   display: flex;
   align-items: start;
   justify-content: center;
+  margin-top: 50px;
   gap: clamp(2rem, 6vw, 6rem);
   padding-block: clamp(2rem, 7vh, 5rem);
 }
@@ -276,19 +277,20 @@ header {
   font-size: clamp(1rem, 0.5vw + 0.9rem, 1.125rem);
   line-height: 1.6;
 }
-.typewriter-h1, .typewriter-h3, .typewriter-p {
+.typewriter-h1, .typewriter-h3 {
   font-family: "Space Grotesk", monospace;
   overflow: hidden;
 }
 .typewriter-h1 {
   width: 22ch;
+  overflow: hidden;
   white-space: nowrap;
   animation: typing 2.5s steps(22) both;
 }
 .typewriter-h3 {
   width: 18ch;
   white-space: nowrap;
-  animation: typing-h3 2s steps(18) 2.5s both;
+  animation: typing-h3 2s steps(18) 3s both;
 }
 .typewriter-p {
   width: 100%;
@@ -319,6 +321,7 @@ header {
   min-width: 0;
   max-width: 40rem;
   display: flex;
+  color: #fff;
   flex-direction: column;
   justify-content: center;
 }

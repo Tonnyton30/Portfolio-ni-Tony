@@ -23,28 +23,3 @@ navLinks.querySelectorAll("a").forEach((link) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeMenu();
 });
-
-const typewriterParagraph = document.querySelector(".typewriter-p");
-
-if (typewriterParagraph) {
-  const paragraphText = typewriterParagraph.textContent.trim();
-
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    typewriterParagraph.textContent = paragraphText;
-  } else {
-    typewriterParagraph.style.minHeight = `${typewriterParagraph.offsetHeight}px`;
-    typewriterParagraph.textContent = "";
-
-    window.setTimeout(() => {
-      let characterIndex = 0;
-      const typingInterval = window.setInterval(() => {
-        typewriterParagraph.textContent += paragraphText[characterIndex];
-        characterIndex += 1;
-
-        if (characterIndex >= paragraphText.length) {
-          window.clearInterval(typingInterval);
-        }
-      }, 25);
-    }, 4500);
-  }
-}

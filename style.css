@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap');
 
+:root{
+  --text-color: hsla(0, 0%, 100%, 0.488);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -34,8 +38,6 @@ header {
   background-color: #000;
   box-shadow: 0 0.25rem 0.5rem rgba(2, 2, 2, 0.5);
 }
-
-.logo {}
 
 .logo h1 {
   margin: 0;
@@ -102,7 +104,7 @@ header {
   flex-direction: row;
   align-items: start;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 150px;
   gap: clamp(2rem, 6vw, 6rem);
   padding-block: clamp(2rem, 7vh, 5rem);
 }
@@ -167,9 +169,9 @@ header {
 }
 
 .status h1 {
-  margin-top: -0.5em;
+  margin-top:2rem;
   font-family:'Syne', 'Impact', sans-serif;
-
+line-height: 0.7;
   text-transform: uppercase;
   font-size: clamp(10rem, 8vw, 7rem);
   margin: 0;
@@ -184,6 +186,9 @@ header {
 .dev{
   -webkit-text-stroke: 2px #fff;
   color:transparent;
+}
+.disc{
+  color: var(--text-color);
 }
 
 .homebutton {
@@ -449,14 +454,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px 25px;
   gap: 20px;
 }
 
 /* for all social containers*/
 .socialContainer {
-  width: 52px;
-  height: 52px;
+  width: 65px;
+  height: 65px;
   border-radius: 5px;
   background-color: #222;
   display: flex;
@@ -520,4 +524,37 @@ header {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.About_Me{
+  width: 100%;
+  max-width: 95rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  margin-top:100px;
+  max-height: 100%;
+}
+.container {
+    display: flex; 
+    gap: 20px; 
+    
+}
+
+.Portration {
+    border: 2px solid #ffffff; /* Kulay at kapal ng border */
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    color: #ffffff;
+    width: 50%;
+}
+.Personal {
+    border: 2px solid #ffffff; /* Kulay at kapal ng border */
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    color: #ffffff;
+    width: 50%; 
 }
