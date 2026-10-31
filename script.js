@@ -12,7 +12,7 @@ menuToggle.addEventListener("click", () => {
   menuToggle.setAttribute("aria-expanded", String(isOpen));
   menuToggle.setAttribute(
     "aria-label",
-    isOpen ? "Isara ang navigation menu" : "Buksan ang navigation menu"
+    isOpen ? "Close the nav menu" : "Buksan ang navigation menu"
   );
 });
 

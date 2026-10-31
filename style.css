@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap');
 
 :root{
+  --font-family: Barlow Condensed,sans-serif;
   --text-color: hsla(0, 0%, 100%, 0.488);
 }
 
 * {
   box-sizing: border-box;
 }
-
-html {
-  font-size: 100%;
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -30,6 +30,8 @@ header {
 }
 
 .nav-item {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -447,7 +449,6 @@ line-height: 0.7;
   }
 }
 
-/* From Uiverse.io by roajuan93 */
 .card {
   width: fit-content;
   height: fit-content;
@@ -457,7 +458,6 @@ line-height: 0.7;
   gap: 20px;
 }
 
-/* for all social containers*/
 .socialContainer {
   width: 65px;
   height: 65px;
@@ -470,19 +470,16 @@ line-height: 0.7;
   transition-duration: 0.3s;
 }
 
-/* instagram*/
 .containerOne:hover {
   background-color: #d62976;
   transition-duration: 0.3s;
 }
 
-/* Tiktok*/
 .containerTwo:hover {
   background-color: #25f4ee;
   transition-duration: 0.3s;
 }
 
-/* Facebook*/
 .containerThree:hover {
   background-color: #1877f2;
   transition-duration: 0.3s;
@@ -531,30 +528,67 @@ line-height: 0.7;
   max-width: 95rem;
   margin-inline: auto;
   padding-inline: 1rem;
-  margin-top:100px;
-  max-height: 100%;
+  margin-top: 50vh;;
+  max-height: 100vh;
+  border: 1px solid #fff;
 }
 .container {
-    display: flex; 
-    gap: 20px; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 5px; 
+    align-items: center;
     
 }
-
-.Portration {
-    border: 2px solid #ffffff; /* Kulay at kapal ng border */
-    padding: 20px;
-    width: 150px;
-    height: 150px;
-    text-align: center;
-    color: #ffffff;
-    width: 50%;
+.container img {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  
 }
 .Personal {
-    border: 2px solid #ffffff; /* Kulay at kapal ng border */
-    padding: 20px;
-    width: 150px;
-    height: 150px;
+    border: 2px solid #ffffff;
+    width: 100vh;
+    height: 100vh;
     text-align: center;
     color: #ffffff;
-    width: 50%; 
+    width: 100%; 
+}
+.achievements {
+    border: 2px solid #ffffff;
+    width: 100vh;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    white-space: nowrap;
+}
+
+.achievement-container{
+  display: flex;
+  flex-direction:column;
+  gap: 1rem;
+}
+.institution{
+  color: #fff;
+  border: 1px solid #ffffff;
+  width: 100vh;
+  border-radius: 10px;
+  line-height: 0.1px;
+  padding: 20px;
+}
+.school-name {
+  margin-left: 100px;
+}
+.school-description{
+  margin-left: 100px;
+}
+
+
+.location{
+  color: #fff;
+  border: 1px solid #ffffff;
+}
+.education-status{
+  color: #fff;
+  border: 1px solid #ffffff;
 }
