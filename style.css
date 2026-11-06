@@ -1,12 +1,13 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap');
 
+/* Design tokens */
 :root {
   --font-family: Barlow Condensed, sans-serif;
   --text-color: hsla(0, 0%, 100%, 0.488);
 }
 
-
+/* Document defaults */
 html {
   height: 100%;
   scroll-behavior: smooth;
@@ -22,11 +23,11 @@ body {
   font-size: 1rem;
 }
 
-
 header {
   width: 100%;
 }
 
+/* Navigation */
 .nav-item {
   position: relative;
   z-index: 1;
@@ -56,9 +57,11 @@ header {
   border-radius: 0.125rem;
   background: #fff;
 }
-main{
+
+main {
   margin-bottom: 60px;
 }
+
 .nav-links {
   display: flex;
   flex: 1;
@@ -85,7 +88,6 @@ main{
   padding: 0;
   color: #fff;
   list-style: none;
-
 }
 
 .nav-links .Contact {
@@ -93,6 +95,7 @@ main{
   background-color: #fff;
 }
 
+/* Page layout and hero */
 .page-container {
   width: 100%;
   max-width: 75rem;
@@ -123,7 +126,6 @@ main{
   height: 22rem;
   align-items: start;
   border-radius: 3000px;
-
 }
 
 .phone img {
@@ -207,10 +209,9 @@ main{
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 2rem;
-
 }
 
-
+/* Hero actions */
 .aboutme,
 .GitHub {
   padding: 0.75rem 1.5rem;
@@ -279,7 +280,6 @@ main{
   position: relative;
   overflow: hidden;
   font-weight: bold;
-
 }
 
 .GitHub::after {
@@ -305,6 +305,7 @@ main{
   background: #292929;
 }
 
+/* Social links */
 .connect-outer {
   display: flex;
   flex-direction: row;
@@ -386,7 +387,8 @@ main{
 }
 
 /* From Uiverse.io by joe-watson-sbf */ 
-.About_Me{
+/* About cards */
+.About_Me {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,6 +398,7 @@ main{
   max-height: 100px;
   height: 100%;
 }
+
 .container {
   color: white;
   position: relative;
@@ -480,3 +483,5 @@ main{
 hehe*/
 
 /*men... what nanaman ako nagawa pati ngayong araw*/
+
+/* added more comments*/
